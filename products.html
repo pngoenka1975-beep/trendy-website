@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shop - Trendy</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header class="header">
+    <h1 class="logo">Trendy</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="#">Shop</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+    <input type="text" id="searchInput" placeholder="Search kurtas...">
+</div>
+
+<!-- PRODUCTS -->
+<div class="products" id="productList">
+
+    <div class="card">
+        <div class="img-box">
+            <img src="kurta1.jpg">
+            <div class="overlay">
+                <a href="https://wa.me/91XXXXXXXXXX?text=I want Black Kurta ₹499">
+                    <button>Order Now</button>
+                </a>
+            </div>
+        </div>
+
+        <h3>Black Kurta</h3>
+        <p class="price">₹499 <span>₹699</span></p>
+    </div>
+
+    <div class="card">
+        <div class="img-box">
+            <img src="kurta2.jpg">
+            <div class="overlay">
+                <a href="https://wa.me/91XXXXXXXXXX?text=I want Designer Kurta ₹799">
+                    <button>Order Now</button>
+                </a>
+            </div>
+        </div>
+
+        <h3>Designer Kurta</h3>
+        <p class="price">₹799 <span>₹999</span></p>
+    </div>
+
+</div>
+
+<script>
+document.getElementById('searchInput').addEventListener('keyup', function(){
+    let value = this.value.toLowerCase();
+    let items = document.querySelectorAll('.card');
+
+    items.forEach(item => {
+        item.style.display = item.innerText.toLowerCase().includes(value) ? 'block' : 'none';
+    });
+});
+</script>
+
+</body>
+</html>
