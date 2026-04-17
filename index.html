@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,13 +6,13 @@
 <title>Trendy</title>
 
 <link rel="stylesheet" href="style.css">
-
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
 </head>
 
 <body>
+<div id="particles"></div>
 
 <header class="header">
     <h1 class="logo">Trendy</h1>
@@ -24,78 +23,60 @@
     </nav>
 </header>
 
-<!-- HERO -->
-<section class="hero">
-    <div class="hero-content" data-aos="fade-up">
-        <h2>Elevate Your Style</h2>
-        <p>Premium Kurtas That Define You</p>
-        <a href="products.html" class="btn">Shop Now</a>
-    </div>
-</section>
+<!-- HERO SLIDER -->
+<section class="hero-slider reaveal">
 
-<!-- CATEGORIES -->
-<section class="categories">
-    <h2 data-aos="fade-up">Shop By Category</h2>
-
-    <div class="cat-grid">
-        <div class="cat" data-aos="zoom-in">
-            <h3>Casual</h3>
-        </div>
-
-        <div class="cat" data-aos="zoom-in">
-            <h3>Wedding</h3>
-        </div>
-
-        <div class="cat" data-aos="zoom-in">
-            <h3>Festive</h3>
+    <div class="slide active reaveal">
+        <img src="kurta1.png">
+        <div class="slide-text">
+            <h2>Premium Collection</h2>
         </div>
     </div>
+
+    <div class="slide reaveal">
+        <img src="kurta2.png">
+        <div class="slide-text">
+            <h2>Festive Wear</h2>
+        </div>
+    </div>
+
 </section>
 
-<!-- BANNER -->
-<section class="banner" data-aos="fade-up">
-    <h2>Flat 20% OFF</h2>
-    <p>Limited Time Offer</p>
+<!-- COLLECTION -->
+
+<!-- STRIP -->
+ <br>
+<section class="strip reaveal">
+    <div><b> Wear Your Personality !!</b></div>
+    <div>💯 Premium Quality</div>
+    <div>🔥 Trending Styles</div>
 </section>
+<br>
+<br>
+<!-- BEST SELLERS -->
+<section class="home-products reaveal" data-aos="fade-up">
+    <h2>Best Sellers</h2>
 
-<!-- PRODUCTS PREVIEW -->
-<section class="products-preview">
-    <h2 data-aos="fade-up">Best Sellers</h2>
-
-    <div class="products">
-
-        <div class="card" data-aos="zoom-in">
+    <div class="products reaveal">
+        <div class="product-card">
             <img src="kurta1.jpg">
-            <h3>Black Kurta</h3>
-            <p>₹499</p>
+            <h3>Blossam pink short kurta</h3>
         </div>
 
-        <div class="card" data-aos="zoom-in">
-            <img src="kurta2.jpg">
-            <h3>Designer Kurta</h3>
-            <p>₹799</p>
+        <div class="product-card reaveal">
+            <img src="kurta6.jpg">
+            <h3>Mikado yellow Short kurta</h3>
         </div>
 
-    </div>
-</section>
-
-<!-- TESTIMONIALS -->
-<section class="testimonials">
-    <h2 data-aos="fade-up">What Customers Say</h2>
-
-    <div class="reviews">
-        <div class="review" data-aos="fade-up">
-            <p>"Amazing quality! Loved it."</p>
-        </div>
-
-        <div class="review" data-aos="fade-up">
-            <p>"Best kurta in this price!"</p>
+        <div class="product-card reaveal">
+            <img src="kurta7.jpg">
+            <h3>Coral Peach Short kurta</h3>
         </div>
     </div>
 </section>
 
 <!-- CTA -->
-<section class="cta" data-aos="fade-up">
+<section class="cta reaveal">
     <h2>Upgrade Your Wardrobe</h2>
     <a href="products.html" class="btn">Explore Now</a>
 </section>
@@ -107,7 +88,53 @@
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 <script>
 AOS.init({ duration: 1000 });
-</script>
 
+let slides = document.querySelectorAll(".slide");
+let index = 0;
+
+setInterval(() => {
+    slides[index].classList.remove("active");
+    index = (index + 1) % slides.length;
+    slides[index].classList.add("active");
+}, 3000);
+</script>
+<script>
+const container = document.getElementById("particles");
+
+function createParticle() {
+    const particle = document.createElement("div");
+    particle.classList.add("particle");
+
+    particle.style.left = Math.random() * 100 + "vw";
+    particle.style.animationDuration = (Math.random() * 5 + 3) + "s";
+
+    container.appendChild(particle);
+
+    setTimeout(() => {
+        particle.remove();
+    }, 8000);
+}
+
+setInterval(createParticle, 200);
+</script>
+<script>
+function revealOnScroll() {
+    let elements = document.querySelectorAll(".reveal");
+
+    elements.forEach(el => {
+        let windowHeight = window.innerHeight;
+        let elementTop = el.getBoundingClientRect().top;
+        let visiblePoint = 100;
+
+        if (elementTop < windowHeight - visiblePoint) {
+            el.classList.add("active");
+        }
+    });
+}
+
+window.addEventListener("scroll", revealOnScroll);
+window.addEventListener("load", revealOnScroll);
+</script>
 </body>
+
 </html>

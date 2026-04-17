@@ -4,14 +4,17 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Shop - Trendy</title>
+
 <link rel="stylesheet" href="style.css">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
+<div id="particles"></div>
 
-<header class="header">
-    <h1 class="logo">Trendy</h1>
+<header class="header reavel">
+    <h1 class="logo reavel">Trendy</h1>
     <nav>
         <a href="index.html">Home</a>
         <a href="#">Shop</a>
@@ -19,54 +22,278 @@
     </nav>
 </header>
 
-<!-- TOP BAR -->
-<div class="top-bar">
+<!-- SEARCH -->
+<div class="top-bar reavel">
     <input type="text" id="searchInput" placeholder="Search kurtas...">
 </div>
 
+<!-- FILTER -->
+<div class="filters reavel">
+    <button onclick="filterProducts('all')">All</button>
+    <button onclick="filterProducts('casual')">Casual</button>
+    <button onclick="filterProducts('wedding')">Wedding</button>
+</div>
+
 <!-- PRODUCTS -->
-<div class="products" id="productList">
+<div class="products">
 
-    <div class="card">
-        <div class="img-box">
-            <img src="kurta1.jpg">
-            <div class="overlay">
-                <a href="https://wa.me/91XXXXXXXXXX?text=I want Black Kurta ₹499">
-                    <button>Order Now</button>
+    <div class="product-card casual">
+        <div class="image-box">
+            <img src="kurta1.png" class="main-img">
+            <img src="kurta1b.png" class="hover-img">
+
+            <div class="overlay reavel">
+                <a href="https://wa.me/919820340546?text=Blossam pink short kurta ₹499">
+                    <button>Buy Now</button>
                 </a>
             </div>
         </div>
 
-        <h3>Black Kurta</h3>
-        <p class="price">₹499 <span>₹699</span></p>
+        <div class="details reavel">
+            <h3>Blossam pink short kurta</h3>
+             <p class="desc">
+               Premium cotton kurta with comfortable fit. Perfect for casual and festive wear.
+              </p>
+
+            <p class="price">₹499 <span>₹699</span></p>
+        </div>
     </div>
 
-    <div class="card">
-        <div class="img-box">
-            <img src="kurta2.jpg">
+    <div class="product-card wedding reavel">
+        <div class="image-box">
+            <img src="kurta2.png" class="main-img">
+            <img src="kurta2b.png" class="hover-img">
+
             <div class="overlay">
-                <a href="https://wa.me/91XXXXXXXXXX?text=I want Designer Kurta ₹799">
-                    <button>Order Now</button>
+                <a href="https://wa.me/919820340546?text=Olive green  Short Kurta ₹499">
+                    <button>Buy Now</button>
                 </a>
             </div>
         </div>
 
-        <h3>Designer Kurta</h3>
-        <p class="price">₹799 <span>₹999</span></p>
+        <div class="details">
+            <h3>Olive green  Short Kurta</h3>
+            <p class="desc">
+            This is a modern and versatile olive green kurta.A perfect choice for Any event.
+            </p>
+            <p class="price">₹499 <span>₹799</span></p>
+        </div>
     </div>
+    <div class="product-card casual reavel">
+        <div class="image-box">
+            <img src="kurta3.png" class="main-img">
+            <img src="kurta3b.png" class="hover-img">
+
+            <div class="overlay">
+                <a href="https://wa.me/919820340546?text=Blue berry classic Short Kurta ₹499">
+                    <button>Buy Now</button>
+                </a>
+            </div>
+        </div>
+
+        <div class="details">
+            <h3>Blue berry classic Short Kurta</h3>
+             <p class="desc">
+            Classic blueberry short kurta with a rich tone, perfect for a timeless and stylish look.
+            </p>
+
+            <p class="price">₹499 <span>₹699</span></p>
+        </div>
+    </div>
+
+     <div class="product-card casual reavel">
+        <div class="image-box">
+            <img src="kurta4.png" class="main-img">
+            <img src="kurta4b.png" class="hover-img">
+
+            <div class="overlay">
+                <a href="https://wa.me/919820340546?text=Red premium Short Kurta ₹499">
+                    <button>Buy Now</button>
+                </a>
+            </div>
+        </div>
+
+        <div class="details">
+            <h3>Red premium Short Kurta</h3>
+             <p class="desc">
+            Bold red kurta with a modern short fit, designed to elevate your everyday look.
+            </p>
+            <p class="price">₹499 <span>₹799</span></p>
+        </div>
+    </div>
+
+     <div class="product-card casual reavel">
+        <div class="image-box">
+            <img src="kurta5.png" class="main-img">
+            <img src="kurta5b.png" class="hover-img">
+
+            <div class="overlay">
+                <a href="https://wa.me/919820340546?text= light Grey Short Kurta ₹499">
+                    <button>Buy Now</button>
+                </a>
+            </div>
+        </div>
+
+        <div class="details">
+            <h3> light Grey Short Kurta</h3>
+             <p class="desc">
+             Minimal light grey kurta with a clean finish, ideal for a classy and effortless look.
+            </p>
+        
+            <p class="price">₹499 <span>₹699</span></p>
+        </div>
+    </div>
+     <div class="product-card casual reavel">
+        <div class="image-box">
+            <img src="kurta6.png" class="main-img">
+            <img src="kurta6b.png" class="hover-img">
+
+            <div class="overlay">
+                <a href="https://wa.me/919820340546?text= Coral Peach Short kurta  ₹499">
+                    <button>Buy Now</button>
+                </a>
+            </div>
+        </div>
+
+        <div class="details">
+            <h3> Coral Peach Short kurta </h3>
+             <p class="desc">
+             Soft coral peach short kurta with a fresh tone, perfect for a modern and elegant look.
+            </p>
+        
+            <p class="price">₹499 <span>₹799</span></p>
+        </div>
+    </div>
+     <div class="product-card casual reavel">
+        <div class="image-box">
+            <img src="kurta7.png" class="main-img">
+            <img src="kurta7b.png" class="hover-img">
+
+            <div class="overlay">
+                <a href="https://wa.me/919820340546?text= Mikado yellow Short kurta ₹499">
+                    <button>Buy Now</button>
+                </a>
+            </div>
+        </div>
+
+        <div class="details">
+            <h3> Mikado yellow Short kurta </h3>
+             <p class="desc">
+             Elegant Mikado yellow short kurta combining vibrant festive style with modern comfort.
+               Perfect for celebrations, it offers a refined look with effortless everyday versatility. 
+            </p>
+        
+            <p class="price">₹499 <span>₹799</span></p>
+        </div>
+    </div>
+    
+
+
 
 </div>
 
+<!-- SCRIPT -->
 <script>
+function filterProducts(category) {
+    let items = document.querySelectorAll('.product-card');
+
+    items.forEach(item => {
+        if(category === 'all' || item.classList.contains(category)){
+            item.style.display = 'block';
+        } else {
+            item.style.display = 'none';
+        }
+    });
+}
+
 document.getElementById('searchInput').addEventListener('keyup', function(){
     let value = this.value.toLowerCase();
-    let items = document.querySelectorAll('.card');
+    let items = document.querySelectorAll('.product-card');
 
     items.forEach(item => {
         item.style.display = item.innerText.toLowerCase().includes(value) ? 'block' : 'none';
     });
 });
 </script>
+<script>
+const container = document.getElementById("particles");
 
+function createParticle() {
+    const particle = document.createElement("div");
+    particle.classList.add("particle");
+
+    particle.style.left = Math.random() * 100 + "vw";
+    particle.style.animationDuration = (Math.random() * 5 + 3) + "s";
+
+    container.appendChild(particle);
+
+    setTimeout(() => {
+        particle.remove();
+    }, 8000);
+}
+
+setInterval(createParticle, 200);
+</script>
+<script>
+function revealOnScroll() {
+    let elements = document.querySelectorAll(".reveal");
+
+    elements.forEach(el => {
+        let windowHeight = window.innerHeight;
+        let elementTop = el.getBoundingClientRect().top;
+        let visiblePoint = 100;
+
+        if (elementTop < windowHeight - visiblePoint) {
+            el.classList.add("active");
+        }
+    });
+}
+
+window.addEventListener("scroll", revealOnScroll);
+window.addEventListener("load", revealOnScroll);
+</script>
+<script>
+function animateCards() {
+    let cards = document.querySelectorAll(".product-card");
+
+    cards.forEach((card, index) => {
+        let windowHeight = window.innerHeight;
+        let cardTop = card.getBoundingClientRect().top;
+
+        if (cardTop < windowHeight - 100) {
+            setTimeout(() => {
+                card.classList.add("show");
+            }, index * 150); // 👈 stagger effect
+        }
+    });
+}
+
+window.addEventListener("scroll", animateCards);
+window.addEventListener("load", animateCards);
+</script>
+<script>
+const cards = document.querySelectorAll(".product-card");
+
+cards.forEach(card => {
+    card.addEventListener("mousemove", (e) => {
+        let rect = card.getBoundingClientRect();
+        let x = e.clientX - rect.left;
+        let y = e.clientY - rect.top;
+
+        let centerX = rect.width / 2;
+        let centerY = rect.height / 2;
+
+        let rotateX = ((y - centerY) / centerY) * -10;
+        let rotateY = ((x - centerX) / centerX) * 10;
+
+        card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.05)`;
+    });
+
+    card.addEventListener("mouseleave", () => {
+        card.style.transform = "rotateX(0deg) rotateY(0deg) scale(1)";
+    });
+});
+</script>
 </body>
+
 </html>
